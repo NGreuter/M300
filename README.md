@@ -82,7 +82,7 @@ Unsere Idee war es ein VLC Stream Server zu erstellen in welchem man bei dem Hos
 So sieht das Vagrantfile aus.
 ![Bild 1](/images/vlc.JPG)
 
-In dem ersten Abschnitt des Files wird die Erstelllung der VM gemacht und den Provider VirtualBox gewählt und der Ordner Media in dem Projekt Ordner wird dem Server übergeben. Somit kann der Datenaustausch der Medien geregelt werden. Ausserdem wird dem Host den Port 80 auf den Port 8080 weitergeleitet.
+In dem ersten Abschnitt des Files wird die Erstelllung der VM gemacht und den Provider VirtualBox gewählt und der Ordner Media in dem Projekt Ordner wird dem Server übergeben. Somit kann der Datenaustausch der Medien geregelt werden. Ausserdem wird dem Host den Port 8080 auf den Port 8080 weitergegeben um darauf zuzugreifen.
 
 In dem Zweiten Abschnitt wird die Installation von dem VLC Server gemacht sowie die Installation meherer Codex zur Wiedergabe verschiedener Dateformate. Mit dem Letzten Befehl wird der Stream gestartet auf den Port 8080.
 

@@ -3,7 +3,7 @@ Vagrant.configure(2) do |config|
     #Auswahl der Box, der Host Name und Ports Einstellungen der VB
     vlc.vm.box = "ubuntu/xenial64"
     vlc.vm.hostname = "vlcserver"
-    vlc.vm.network "forwarded_port", guest:80, host:8080, host_ip: "0.0.0.0"
+    vlc.vm.network "forwarded_port", guest:8080, host:8080, host_ip: "0.0.0.0"
 	vlc.vm.synced_folder "./media", "/home/media"
     #Virtualisierungs Programm, Name und Memory der VM auswählen
     vlc.vm.provider "virtualbox" do |vb|
