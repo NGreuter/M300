@@ -96,6 +96,6 @@ Danach sieht man das gestreamte Video, in diesem Fall das Media.mp4.
 
 ![Bild 3](/images/vlcstream.JPG)
 
-## Teamspeak Server
+## [Teamspeak Server](/Teamspeak/README)
 
 --------------------
