@@ -1,0 +1,27 @@
+#!/usr/bin/ruby
+# -*- mode: ruby -*-
+# Creates a Teamspeak server on the Vagrant VM with VirtualBox as a provider
+
+Vagrant.configure("2") do |config|
+  # Provision TeamSpeak server instance
+  config.vm.define "ts-server-instance" do |i|
+    # Vagrant box - CentOS 7
+    i.vm.box = "centos/7"
+    # Define hostname
+    i.vm.hostname = "ts-server"
+    # Set provider settings
+    i.vm.provider "virtualbox" do |v|
+    # v.vmname = "ts-server"
+      v.cpus = 2
+      v.memory = 4096
+    end
+    # Assign IP via DHCP
+    i.vm.network "public_network"
+    # Install TeamSpeak server
+    i.vm.provision "shell", path: "./installApp.sh"
+    # Set TeamSpeak service into systemd and start it
+    i.vm.provision "shell", path: "./addSystemdService.sh"
+    # Create TeamSpeak service into firewalld
+    i.vm.provision "shell", path: "./addFirewalldService.sh"
+  end
+end
