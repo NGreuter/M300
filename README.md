@@ -37,6 +37,13 @@ Unsere ersten Ideen:
 
 Schlussendlich haben wir uns dazu entschieden das wir einen Teamspeak Server (erarbeitet durch Hr. Kotuwattegedera) und einen VLC Stream Server  (erarbeitet durch Hr. Greuter).
 
+## Verfügbarkeit
+Die Dienste werden im TBZ Netzwerk unter folgender IP bereitgestellt: 10.71.13.15. Die Virtuelle Maschine wird mit einer DHCP Adresse in einem vom Host basierten NAT Netzwerk ausgestattet. Der Teamspeak server ist unter der IP erreichabr während der VLC Stream Server unter 10.71.13.15:8080 erreichbar ist.
+
+Siehe Netzwerkplan
+
+![Bild 1](/images/nplan.JPG)
+
 ## Vorbereitung
 Folgende Vorbereitung mussten getroffen werden um die Umgebung für die 'Service as Code' zu ermöglichen.
 * Github
